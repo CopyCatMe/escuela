@@ -7,6 +7,7 @@ function Modal({ openElement, children }) {
 
     const openModal = () => refModal.current?.showModal()
     const closeModal = () => refModal.current?.close()
+    
 
     return (
         <>

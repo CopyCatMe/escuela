@@ -29,7 +29,7 @@ export default async function Asignaturas() {
                         </div>
 
                         <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
-                            <AsignaturaModificar asignatura={asignatura} />
+                            <AsignaturaModificar asignatura={asignatura} estudiantes={estudiantes} />
                         </Modal>
 
                         <Modal openElement={<p className="inline border-2 border-black">Eliminar</p>}>

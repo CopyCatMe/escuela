@@ -29,6 +29,7 @@ export default async function Estudiantes() {
                             <p>{estudiante.fecha_nacimiento.toLocaleDateString()}</p>
                             <p><img src={estudiante.foto} className="size-48 object-cover rounded-full" /></p>
                             <p>{estudiante.tutor_legal}</p>
+                            <p>{grupos.find(grupo => grupo.id === estudiante.grupoId)?.nombre}</p>
                         </div>
 
                         <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>

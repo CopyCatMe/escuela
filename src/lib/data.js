@@ -40,14 +40,17 @@ async function obtenerEstudiante(id) {
 // ---------------------   ASIGNATURAS -----------------------
 
 async function obtenerAsignaturas() {
-    const asignaturas = await prisma.asignatura.findMany()
+    const asignaturas = await prisma.asignatura.findMany({
+        include: { estudiantes: true }
+    })
     return asignaturas
 }
 
 
 async function obtenerAsignatura(id) {
     const asignatura = await prisma.asignatura.findUnique({
-        where: { id: +id }
+        where: { id: +id },
+        include: { estudiantes: true }
     })
     return asignatura
 }
